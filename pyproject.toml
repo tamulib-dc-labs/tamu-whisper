@@ -1,0 +1,19 @@
+[project]
+name = "tamuwhisper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "argparse>=1.4.0",
+    "click>=8.2.1",
+    "openai-whisper",
+    "ruff>=0.12.0",
+    "tqdm>=4.67.1",
+]
+
+[tool.uv.sources]
+openai-whisper = { git = "https://github.com/openai/whisper.git" }
+
+[project.scripts]
+tamuwhisper = "tamuwhisper:cli"

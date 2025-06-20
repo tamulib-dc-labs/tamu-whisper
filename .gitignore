@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Binaries and App Specific
+*.vtt
+*.json
+*.mp3
+*.mp4
+*.avi
+*.flac
+*.mkv
+*.wmv
+*.wma
+*.wav
+*.webm
+main.py
+default.log
+
+# Jetbrains
+.idea/*
