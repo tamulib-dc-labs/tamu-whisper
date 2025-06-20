@@ -8,9 +8,11 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",  # Log format
 )
 
+
 @click.group()
 def cli() -> None:
     pass
+
 
 @cli.command(
     "transcribe", help="Create VTTs with FADGI Embedded Metadata and Whisper JSON"
@@ -48,7 +50,21 @@ def cli() -> None:
     '-i', '--ignore-existing', is_flag=True,
               help='Ignore A/V files that already have a transcription'
 )
-def run(directory: str, output: str, model: str, language: str, fp16: bool, ignore_existing: bool) -> None:
-    x = Transcriber(directory, output, model, language, fp16, ignore_existing)
+@click.option(
+    "-c",
+    "--creator",
+    help="Name of person using the tool",
+    default="Unknown"
+)
+def run(
+        directory: str,
+        output: str,
+        model: str,
+        language: str,
+        fp16: bool,
+        ignore_existing: bool,
+        creator: str
+) -> None:
+    x = Transcriber(directory, output, model, language, fp16, ignore_existing, creator=creator)
     x.batch_transcribe()
 

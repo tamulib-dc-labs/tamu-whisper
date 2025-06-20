@@ -1,1 +1,1 @@
-from transcribe import Transcriber
+from transcribe import Transcriber as Transcriber
