@@ -1,7 +1,7 @@
 [project]
 name = "tamuwhisper"
-version = "0.1.1"
-description = "Add your description here"
+version = "0.1.2"
+description = "A Utility to Initiate the Generation of Transcripts, Subtitles, and Closed Captions"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
