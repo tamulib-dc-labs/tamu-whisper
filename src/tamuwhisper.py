@@ -56,6 +56,7 @@ def cli() -> None:
     help="Name of person using the tool",
     default="Unknown"
 )
+@click.option("--check_silence", is_flag=True, help="Check if files are silent first.")
 def run(
         directory: str,
         output: str,
@@ -63,8 +64,9 @@ def run(
         language: str,
         fp16: bool,
         ignore_existing: bool,
-        creator: str
+        creator: str,
+        check_silence: bool
 ) -> None:
-    x = Transcriber(directory, output, model, language, fp16, ignore_existing, creator=creator)
+    x = Transcriber(directory, output, model, language, fp16, ignore_existing, creator=creator, check_for_silence=check_silence)
     x.batch_transcribe()
 

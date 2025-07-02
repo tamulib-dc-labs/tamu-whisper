@@ -1,12 +1,13 @@
 [project]
 name = "tamuwhisper"
-version = "0.1.2"
+version = "0.1.3"
 description = "A Utility to Initiate the Generation of Transcripts, Subtitles, and Closed Captions"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "click>=8.2.1",
     "openai-whisper",
+    "pydub>=0.25.1",
     "ruff>=0.12.0",
     "tqdm>=4.67.1",
 ]
